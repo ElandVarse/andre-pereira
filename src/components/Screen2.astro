@@ -1,0 +1,44 @@
+---
+const nome = "Mundo";
+---
+
+<div id="screen2">
+    <div id="dino"></div>
+</div>
+
+<style>
+    #screen2 {
+        background: linear-gradient(
+            to bottom,
+            #764921 2%,
+            #24160a 8%,
+            #051017 20%
+        );
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #dino {
+        position: absolute;
+        background: url("../assets/imgs/dino.png");
+		background-size: contain; 
+        background-repeat: no-repeat;
+
+        width: 1200px;
+        height: 1200px;
+
+        top: 200px; bottom: 0;
+        left: 100px; right: 0;
+        margin: auto;
+
+        opacity: 0.4;
+        transform: rotate(-60deg);
+    }
+
+    h1 {
+        color: #0070f3;
+        font-family: sans-serif;
+    }
+</style>
