@@ -8,7 +8,11 @@ import Header from "./Header.astro";
 <div id="screen1">
 	<Header />
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main></main>
+
+
+	<main>
+		<div id="clouds1"></div>
+	</main>
 
 	<footer id="footer">
 		<div id="montains"></div>
@@ -39,7 +43,7 @@ import Header from "./Header.astro";
 			to bottom,
 			#2a6fdb,
 			#87cefa
-		); /* Azul mais escuro → azul claro */
+		);
 	}
 
 	#background {
@@ -56,19 +60,35 @@ import Header from "./Header.astro";
 		width: 100%;
 	}
 
+	#clouds1 {
+		position: absolute;
+		z-index: 0;
+		top: 120px;
+
+		height: 600px;
+		width: 100%;
+
+		background-image: url("../assets/imgs/clouds-1.png");
+		background-repeat: repeat;
+		background-position: 0 0;
+		background-size: 100% 100%;
+		animation: move-background-other-way 120s linear infinite;
+		z-index: 0;
+	}
+
 	#montains {
 		position: absolute;
 		z-index: 0;
 		bottom: 0;
 
-		height: 600px;
+		height: 650px;
 		width: 100%;
 
 		background-image: url("../assets/imgs/montains.png");
 		background-repeat: repeat-x;
 		background-position: 0 0;
-		background-size: 100% 100%; /* ou cover / contain dependendo do efeito */
-		animation: mover-fundo 120s linear infinite;
+		background-size: 100% 100%;
+		animation: move-background 120s linear infinite;
 		z-index: 0;
 	}
 
@@ -86,18 +106,27 @@ import Header from "./Header.astro";
 		background-image: url("../assets/imgs/floor.png");
 		background-repeat: repeat-x;
 		background-position: 0 0;
-		background-size: 100% 100%; /* ou cover / contain dependendo do efeito */
-		animation: mover-fundo 12s linear infinite;
+		background-size: 100% 100%;
+		animation: move-background 12s linear infinite;
 		z-index: 2;
 		position: relative;
 	}
 
-	@keyframes mover-fundo {
+	@keyframes move-background {
 		0% {
 			background-position: 0 0;
 		}
 		100% {
 			background-position: -1000px 0;
+		}
+	}
+
+	@keyframes move-background-other-way {
+		0% {
+			background-position: 0 0;
+		}
+		100% {
+			background-position: 1000px 0;
 		}
 	}
 
