@@ -1,0 +1,66 @@
+---
+import Myself from "../assets/imgs/myself.gif";
+---
+
+<div class="modal about show-off">
+    <img id="myself-img" src={Myself.src} alt="" fetchpriority="high" height="160" width="160"/>
+
+    <div class="modal-text">
+        <h1>About Me</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat neque adipisci hic error voluptates officiis laudantium eaque expedita numquam tenetur quasi, et vero cumque fugit ipsa? Iusto ut esse voluptatibus.</p>
+    </div>
+</div>
+
+<style>
+    .show-off {
+        display: none !important;
+    }
+
+    .modal {
+        background-color: #192c1c;
+        padding: 12px 24px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+        border-radius: 16px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal img {
+        border-radius: 50%;
+        margin: 20px;
+    }
+
+    .modal h1 {
+        color: #fff;
+        font-size: 2rem;
+        margin: 20px;
+    }
+    
+    .modal p {
+        color: #fff;
+        font-size: 1.2rem;
+        margin: 20px;
+    }
+</style>
+
+<script>
+    const aboutModal = document.querySelector(".modal.about");
+    const aboutHeader = document.querySelector("#header-about");
+
+
+    if(aboutHeader !== null && aboutModal !== null) {
+        aboutHeader.addEventListener("click", () => {
+            aboutModal.classList.toggle("show-off");
+        });
+    }
+
+
+</script>
