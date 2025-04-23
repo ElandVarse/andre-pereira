@@ -2,26 +2,38 @@
 import Myself from "../assets/imgs/myself.gif";
 ---
 
-<div class="modal about show-off">
-    <img id="myself-img" src={Myself.src} alt="" fetchpriority="high" height="160" width="160"/>
+<div class="modal about">
+    <img
+        id="myself-img"
+        src={Myself.src}
+        alt=""
+        fetchpriority="high"
+        height="160"
+        width="160"
+    />
 
     <div class="modal-text">
         <h1>About Me</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat neque adipisci hic error voluptates officiis laudantium eaque expedita numquam tenetur quasi, et vero cumque fugit ipsa? Iusto ut esse voluptatibus.</p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            neque adipisci hic error voluptates officiis laudantium eaque
+            expedita numquam tenetur quasi, et vero cumque fugit ipsa? Iusto ut
+            esse voluptatibus.
+        </p>
     </div>
 </div>
 
 <style>
-    .show-off {
-        display: none !important;
-    }
-
     .modal {
-        background-color: #192c1c;
+        background: linear-gradient(to bottom, #279346, #613bdd);
+        border-left: 8px solid #1b6731;
+        border-bottom: 8px solid #442a9c;
+
         padding: 12px 24px;
         position: absolute;
-        top: 40%;
-        left: 50%;
+        top: 25%;
+        left: 25%;
+        max-width: 600px;
         transform: translate(-50%, -50%);
 
         box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
@@ -31,23 +43,35 @@ import Myself from "../assets/imgs/myself.gif";
         flex-direction: row;
         justify-content: center;
         align-items: center;
+
+        transform: scale(0);
+        transition: transform 0.5s;
+    }
+
+    .modal.expanded {
+        transform: scale(1);
     }
 
     .modal img {
         border-radius: 50%;
         margin: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
     .modal h1 {
         color: #fff;
         font-size: 2rem;
         margin: 20px;
+        background-color: #000000a7;
+        padding: 10px 16px;
     }
-    
+
     .modal p {
         color: #fff;
         font-size: 1.2rem;
         margin: 20px;
+        background-color: #000000a7;
+        padding: 10px 16px;
     }
 </style>
 
@@ -55,12 +79,9 @@ import Myself from "../assets/imgs/myself.gif";
     const aboutModal = document.querySelector(".modal.about");
     const aboutHeader = document.querySelector("#header-about");
 
-
-    if(aboutHeader !== null && aboutModal !== null) {
+    if (aboutHeader !== null && aboutModal !== null) {
         aboutHeader.addEventListener("click", () => {
-            aboutModal.classList.toggle("show-off");
+            aboutModal.classList.toggle("expanded");
         });
     }
-
-
 </script>
