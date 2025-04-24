@@ -1,5 +1,6 @@
 ---
 import Myself from "../assets/imgs/myself.gif";
+import "../assets/styles/modal.css";
 ---
 
 <div class="modal about">
@@ -23,65 +24,13 @@ import Myself from "../assets/imgs/myself.gif";
     </div>
 </div>
 
-<style>
-    .modal {
-        background: linear-gradient(to bottom, #279346, #613bdd);
-        border-left: 8px solid #1b6731;
-        border-bottom: 8px solid #442a9c;
-
-        padding: 12px 24px;
-        position: absolute;
-        top: 25%;
-        left: 25%;
-        max-width: 600px;
-        transform: translate(-50%, -50%);
-
-        box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
-        border-radius: 16px;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        transform: scale(0);
-        transition: transform 0.5s;
-    }
-
-    .modal.expanded {
-        transform: scale(1);
-    }
-
-    .modal img {
-        border-radius: 50%;
-        margin: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .modal h1 {
-        color: #fff;
-        font-size: 2rem;
-        margin: 20px;
-        background-color: #000000a7;
-        padding: 10px 16px;
-    }
-
-    .modal p {
-        color: #fff;
-        font-size: 1.2rem;
-        margin: 20px;
-        background-color: #000000a7;
-        padding: 10px 16px;
-    }
-</style>
-
 <script>
-    const aboutModal = document.querySelector(".modal.about");
-    const aboutHeader = document.querySelector("#header-about");
+    const modal = document.querySelector(".modal.about");
+    const about = document.querySelector("#header-about");
 
-    if (aboutHeader !== null && aboutModal !== null) {
-        aboutHeader.addEventListener("click", () => {
-            aboutModal.classList.toggle("expanded");
+    if (about !== null && modal !== null) {
+        about.addEventListener("click", () => {
+            modal.classList.toggle("expanded");
         });
     }
 </script>
