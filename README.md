@@ -1,3 +1,12 @@
+#MY PORTFOLIO
+
+![Home](./src/assets/portfolio-baby-dancing.GIF)
+
+<br/>
+<br/>
+
+
+
 # Astro Starter Kit: Basics
 
 ```sh
