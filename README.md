@@ -1,6 +1,6 @@
-#MY PORTFOLIO
+# MY PORTFOLIO
 
-![Home](./src/assets/portfolio-baby-dancing.GIF)
+![Home](./src/assets/portfolio-baby-dancing.gif)
 
 <br/>
 <br/>
