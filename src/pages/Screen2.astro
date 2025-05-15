@@ -1,13 +1,48 @@
 ---
 const nome = "Mundo";
+
+import particles from "../assets/imgs/particles.png";
 ---
 
 <div id="screen2">
+    <div class="text-container">
+        <h1>Olá, {nome}!</h1>
+        <p>Seja bem-vindo ao meu site.</p>
+        <p>Estou feliz em tê-lo aqui.</p>
+        <p>Explore e divirta-se!</p>
+    </div>
+
     <div id="dino"></div>
     <div id="floor-texture"></div>
 </div>
 
 <style>
+    .text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        padding: 20px 60px;
+        z-index: 9999;
+        background-image: url("../assets/imgs/particles.gif");
+        background-position: bottom;
+        background-color: #ffffff;
+        box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.5);
+ 
+    }
+
+    .text-container h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .text-container p {
+        font-size: 1.25rem;
+    }
+
     #screen2 {
         background-color: #051017;
         height: 100vh;
@@ -19,14 +54,16 @@ const nome = "Mundo";
     #dino {
         position: absolute;
         background: url("../assets/imgs/dino.png");
-		background-size: contain; 
+        background-size: contain;
         background-repeat: no-repeat;
 
         width: 1200px;
         height: 1200px;
 
-        top: 0px; bottom: 0;
-        left: 100px; right: 0;
+        top: 0px;
+        bottom: 0;
+        left: 100px;
+        right: 0;
         margin: auto;
 
         opacity: 0.4;
@@ -35,7 +72,7 @@ const nome = "Mundo";
 
     #floor-texture {
         background: url("../assets/imgs/floor-texture.png");
-		background-size: 160px; 
+        background-size: 160px;
         width: 100%;
         height: 100%;
         opacity: 0.2;
