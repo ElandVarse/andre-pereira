@@ -5,48 +5,11 @@ import particles from "../assets/imgs/particles.png";
 ---
 
 <div id="screen2">
-    <div class="text-container hide">
-        <h1>Olá, {nome}!</h1>
-        <p>Seja bem-vindo ao meu site.</p>
-        <p>Estou feliz em tê-lo aqui.</p>
-        <p>Explore e divirta-se!</p>
-    </div>
-
     <div id="dino"></div>
     <div id="floor-texture"></div>
 </div>
 
 <style>
-    .hide {
-        display: none;
-    }
-
-    .text-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: black;
-        font-weight: bold;
-        padding: 20px 60px;
-        z-index: 9999;
-        background-image: url("../assets/imgs/particles.gif");
-        background-position: bottom;
-        background-color: #ffffff;
-        box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.5);
- 
-    }
-
-    .text-container h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-    }
-
-    .text-container p {
-        font-size: 1.25rem;
-    }
-
     #screen2 {
         background-color: #051017;
         height: 100vh;
