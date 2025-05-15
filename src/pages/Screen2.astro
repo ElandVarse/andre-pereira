@@ -5,7 +5,7 @@ import particles from "../assets/imgs/particles.png";
 ---
 
 <div id="screen2">
-    <div class="text-container">
+    <div class="text-container hide">
         <h1>Olá, {nome}!</h1>
         <p>Seja bem-vindo ao meu site.</p>
         <p>Estou feliz em tê-lo aqui.</p>
@@ -17,6 +17,10 @@ import particles from "../assets/imgs/particles.png";
 </div>
 
 <style>
+    .hide {
+        display: none;
+    }
+
     .text-container {
         position: absolute;
         top: 50%;
