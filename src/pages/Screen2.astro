@@ -1,12 +1,23 @@
 ---
 const nome = "Mundo";
 
-import particles from "../assets/imgs/particles.png";
+import dog_call from "../assets/imgs/dog-call.gif";
 ---
 
 <div id="screen2">
     <div id="dino"></div>
     <div id="floor-texture"></div>
+
+    <h1 class="contact__title">Olá, {nome}!</h1>
+    <div class="contact__container">
+        <p>Seja bem-vindo ao meu portfólio.</p>
+        <p>Estou animado para compartilhar meu trabalho com você.</p>
+        <p>Vamos explorar juntos!</p>
+
+        <p>Github: <strong><a target="_BLANK" href="https://github.com/ElandVarse">ElandVarse</a></p></strong></p>
+        <p>Canal no Youtube: <a target="_BLANK" href="https://www.youtube.com/@pereira-andre">@pereira-andre</a></p>
+        <p>Me mande um <a target="_BLANK" href="mailto:exemplo@email.com">e-mail!</a></p>
+    </div>
 </div>
 
 <style>
@@ -28,12 +39,13 @@ import particles from "../assets/imgs/particles.png";
         height: 1200px;
 
         top: 0px;
-        bottom: 0;
-        left: 100px;
+        left: 150px;
         right: 0;
+        bottom: 0;
         margin: auto;
 
         opacity: 0.4;
+        z-index: 999;
         transform: rotate(-60deg);
     }
 
@@ -45,8 +57,33 @@ import particles from "../assets/imgs/particles.png";
         opacity: 0.2;
     }
 
-    h1 {
-        color: #0070f3;
+    .contact__container {
+        left: 0;
+        color: #fff;
+        bottom: 0;
+        opacity: 0.4;
+        padding: 32px;
+        position: absolute;
+        text-align: left;
         font-family: sans-serif;
+    }
+
+    .contact__container a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .contact__title {
+        font-size: 6rem;
+        margin-bottom: 16px;
+
+        transform: rotate(10deg);
+        color: #ffffff;
+        position: absolute;
+        top: 100px;
+        right: 100px;
+        z-index: 999;
+        opacity: 0.4;
     }
 </style>
