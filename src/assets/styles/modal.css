@@ -24,6 +24,11 @@
         z-index: 999;
     }
 
+    .modal.solid {
+        width: 80%;
+        max-width: unset;
+    }
+
     .modal.expanded {
         transform: translate(-50%, -50%)  scale(1);
     }

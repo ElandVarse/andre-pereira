@@ -1,0 +1,54 @@
+---
+import Myself from "../assets/imgs/myself.gif";
+import "../assets/styles/modal.css";
+---
+
+<div class="modal solid">
+  <div class="modal-text">
+    <h1>Princípios SOLID</h1>
+
+    <h2>S — Single Responsibility Principle</h2>
+    <p>
+      <strong>Princípio da Responsabilidade Única:</strong> Uma classe deve ter apenas
+      
+      um motivo para mudar, ou seja, deve ter apenas uma responsabilidade.
+    </p>
+
+    <h2>O — Open/Closed Principle</h2>
+    <p>
+      <strong>Princípio Aberto/Fechado:</strong> Entidades (classes, funções, módulos,
+      etc.) devem estar abertas para extensão, mas fechadas para modificação.
+    </p>
+
+    <h2>L — Liskov Substitution Principle</h2>
+    <p>
+      <strong>Princípio da Substituição de Liskov:</strong> Objetos de uma superclasse
+      devem poder ser substituídos por objetos de suas subclasses sem alterar o comportamento
+      esperado.
+    </p>
+
+    <h2>I — Interface Segregation Principle</h2>
+    <p>
+      <strong>Princípio da Segregação de Interface:</strong> Uma classe não deve
+      ser forçada a implementar interfaces que não utiliza. É melhor ter várias interfaces
+      específicas do que uma geral.
+    </p>
+
+    <h2>D — Dependency Inversion Principle</h2>
+    <p>
+      <strong>Princípio da Inversão de Dependência:</strong> Módulos de alto nível
+      não devem depender de módulos de baixo nível. Ambos devem depender de abstrações.
+    </p>
+  </div>
+</div>
+
+<script>
+  const modal = document.querySelector(".modal.solid");
+  const about = document.querySelector("#header-solid");
+
+  if (about !== null && modal !== null) {
+    about.addEventListener("click", () => {
+      modal.classList.toggle("expanded");
+    });
+  }
+</script>
