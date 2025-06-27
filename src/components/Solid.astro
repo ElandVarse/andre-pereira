@@ -43,12 +43,26 @@ import "../assets/styles/modal.css";
 </div>
 
 <script>
-  const modal = document.querySelector(".modal.solid");
-  const about = document.querySelector("#header-solid");
+const modal = document.querySelector(".modal.solid");
+const about = document.querySelector("#header-solid");
 
-  if (about !== null && modal !== null) {
-    about.addEventListener("click", () => {
-      modal.classList.toggle("expanded");
-    });
-  }
+if (about !== null && modal !== null) {
+  // Alterna o modal ao clicar no botão
+  about.addEventListener("click", (event) => {
+    event.stopPropagation(); // Evita que o clique no botão feche imediatamente o modal
+    modal.classList.toggle("expanded");
+  });
+
+  // Fecha o modal ao clicar fora dele
+  document.addEventListener("click", (event) => {
+    if (modal.classList.contains("expanded") && !modal.contains(event.target)) {
+      modal.classList.remove("expanded");
+    }
+  });
+
+  // Impede que cliques dentro do modal fechem ele
+  modal.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+}
 </script>
